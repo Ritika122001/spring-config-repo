@@ -19,3 +19,8 @@ spring:
 logging:
   level:
     root: DEBUG
+
+item:
+  service:
+    fail: false
+
