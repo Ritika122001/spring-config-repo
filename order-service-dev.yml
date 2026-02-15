@@ -20,4 +20,19 @@ spring:
 logging:
   level:
     root: DEBUG
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      itemService:
+        registerHealthIndicator : true
+        slidingWindowSize : 5
+        failureRateThreshold : 50
+        waitDurationInOpenState: 10s
+  retry:
+    instances:
+      itemService:
+        maxAttempts : 5
+        waitDuration : 2s
+  
   
