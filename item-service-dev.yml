@@ -22,5 +22,5 @@ logging:
 
 item:
   service:
-    fail: true
+    fail: false
 
