@@ -1,0 +1,12 @@
+spring:
+    cloud:
+        gateway:
+            routes:
+                - id: ITEM-SERVICE
+                  uri : lb://ITEM-SERVICE
+                  predicates: 
+                    - Path=/api/items/**
+                - id: ORDER-SERVICE
+                  uri : lb://ORDER-SERVICE
+                  predicates: 
+                    - Path=/api/orders/**
