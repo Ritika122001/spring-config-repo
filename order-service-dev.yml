@@ -29,6 +29,9 @@ resilience4j:
         slidingWindowSize : 5
         failureRateThreshold : 50
         waitDurationInOpenState: 10s
+        recordExceptions:
+          - feign.FeignException
+          - java.lang.RuntimeException
   retry:
     instances:
       itemService:
