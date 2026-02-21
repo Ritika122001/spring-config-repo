@@ -21,10 +21,10 @@ spring:
   cloud:
     openfeign:
       circuitbreaker:
-        enabled: true
+        enabled: false
     loadbalancer:
       retry:
-        enabled: true
+        enabled: false
 
 logging:
   level:
