@@ -33,7 +33,7 @@ logging:
 resilience4j:
   circuitbreaker:
     instances:
-      itemService:
+      item-service:
         registerHealthIndicator: true
         slidingWindowSize: 5
         failureRateThreshold: 50
@@ -43,7 +43,7 @@ resilience4j:
           - java.lang.RuntimeException
   retry:
     instances:
-      itemService:
+      item-service:
         maxAttempts: 5
         waitDuration: 2s
 
