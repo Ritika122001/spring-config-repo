@@ -46,6 +46,11 @@ resilience4j:
       itemService:
         maxAttempts : 5
         waitDuration : 2s
-        
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
   
   
