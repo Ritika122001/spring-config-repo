@@ -29,6 +29,8 @@ spring:
 logging:
   level:
     root: DEBUG
+    io.github.resilience4j.circuitbreaker : DEBUG
+    io.github.resilience4j.retry :  DEBUG
 
 resilience4j:
   circuitbreaker:
