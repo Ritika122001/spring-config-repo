@@ -20,6 +20,15 @@ spring:
 logging:
   level:
     root: DEBUG
+    
+cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+
+    loadbalancer:
+      retry:
+        enabled: true
 
 resilience4j:
   circuitbreaker:
@@ -38,8 +47,5 @@ resilience4j:
         maxAttempts : 5
         waitDuration : 2s
         
-feign:
-  circuitbreaker:
-    enabled: true
   
   
