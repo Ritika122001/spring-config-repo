@@ -21,7 +21,7 @@ spring:
       circuitbreaker:
         enabled: true
 
-loadbalancer:
+ loadbalancer:
       retry:
         enabled: true
 
