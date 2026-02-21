@@ -20,7 +20,4 @@ logging:
   level:
     root: DEBUG
 
-item:
-  service:
-    fail: true
 
