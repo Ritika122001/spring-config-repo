@@ -36,18 +36,25 @@ resilience4j:
     instances:
       itemBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 5
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         recordExceptions:
-          - feign.FeignException
-          - java.lang.RuntimeException
+          - feign.RetryableException
+          - java.io.IOException
+
   retry:
     instances:
       itemRetry:
-        maxAttempts: 5
-        waitDuration: 2s
+        maxAttempts: 3
+        waitDuration: 500ms
 
+  timelimiter:
+    instances:
+      itemService:
+        timeoutDuration: 2s
+        
 management:
   endpoints:
     web:
