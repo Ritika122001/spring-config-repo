@@ -41,8 +41,7 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         recordExceptions:
-          - feign.RetryableException
-          - java.io.IOException
+          - java.lang.RuntimeException
 
   retry:
     instances:
