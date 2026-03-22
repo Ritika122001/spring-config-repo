@@ -5,7 +5,10 @@ spring:
 server:
     port: 8571
 
-
+logging:
+  level:
+    root: INFO
+    
 eureka:
   client:
     service-url:
