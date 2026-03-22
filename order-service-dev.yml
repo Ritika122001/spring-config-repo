@@ -36,7 +36,7 @@ resilience4j:
     instances:
       itemBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 10
+        slidingWindowSize: 5
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
