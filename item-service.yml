@@ -12,6 +12,11 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
 
+
+logging:
+  level:
+    root: INFO
+
 management:
   endpoints:
     web:
