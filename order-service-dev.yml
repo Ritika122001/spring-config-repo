@@ -62,7 +62,7 @@ resilience4j:
         recordExceptions:
           - java.lang.RuntimeException
         ignore-exceptions:
-          - com.example.item.exceptions.ItemNotFoundException
+          - com.example.order.exceptions.ItemNotFoundException
 
   retry:
     instances:
