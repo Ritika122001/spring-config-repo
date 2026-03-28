@@ -61,6 +61,8 @@ resilience4j:
         waitDurationInOpenState: 10s
         recordExceptions:
           - java.lang.RuntimeException
+        ignore-exceptions:
+          - com.example.item.exceptions.ItemNotFoundException
 
   retry:
     instances:
