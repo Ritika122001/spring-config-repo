@@ -15,6 +15,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*"  # required to deserialize your DTO
+        spring.json.value.default.type: com.example.order.dto.ItemDTO
   
   datasource:
     url: jdbc:h2:mem:ordersdb
