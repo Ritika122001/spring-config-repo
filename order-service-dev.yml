@@ -35,6 +35,7 @@ logging:
   level:
     io.github.resilience4j.retry: DEBUG
     io.github.resilience4j.circuitbreaker: DEBUG
+    org.springframework.cache: TRACE
 
 resilience4j:
   circuitbreaker:
