@@ -59,7 +59,7 @@ resilience4j:
         minimumNumberOfCalls: 1
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
-        recordExceptions:
+        record-exceptions:
           - java.lang.RuntimeException
         ignore-exceptions:
           - com.example.order.exceptions.ItemNotFoundException
