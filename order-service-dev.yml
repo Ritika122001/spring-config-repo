@@ -60,6 +60,7 @@ resilience4j:
         waitDurationInOpenState: 10s
         ignoreExceptions:
           - com.example.order.exceptions.ItemNotFoundException
+          - feign.FeignException.NotFound
 
   retry:
     instances:
