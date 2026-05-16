@@ -54,21 +54,22 @@ resilience4j:
   circuitbreaker:
     instances:
       itemBreaker:
-        registerHealthIndicator: true
         slidingWindowSize: 5
         minimumNumberOfCalls: 1
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
-        ignore-exceptions:
+        ignoreExceptions:
           - com.example.order.exceptions.ItemNotFoundException
-
 
   retry:
     instances:
       itemRetry:
         maxAttempts: 3
         waitDuration: 500ms
-
+        ignoreExceptions:
+          - com.example.order.exceptions.ItemNotFoundException
+          - feign.FeignException.NotFound
+          
   timelimiter:
     instances:
       itemService:
