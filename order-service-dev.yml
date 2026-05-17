@@ -54,8 +54,8 @@ resilience4j:
   circuitbreaker:
     instances:
       itemBreaker:
-        slidingWindowSize: 5
-        minimumNumberOfCalls: 1
+        slidingWindowSize: 2
+        minimumNumberOfCalls: 2
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         ignoreExceptions:
